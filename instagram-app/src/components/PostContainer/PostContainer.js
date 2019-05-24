@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import CommentSection from '../CommentSection/CommentSection';
 import './post.css';
+import Likes from './Likes';
 
 
 function PostContainer(props) {
@@ -25,7 +26,12 @@ function PostContainer(props) {
                     <img className="postThumb" src={data.thumbnailUrl} alt={data.username}/><h4>{data.username}</h4>
                     </div>
                 <img src={data.imageUrl} alt={data.username}  />
-                <CommentSection/>
+                <Likes/>
+                <CommentSection
+                value={data.value}
+                changeHandler={props.changeHandler}
+                addCommentHandler={props.addCommentHandler}
+                />
                 
             </div>
             ))}

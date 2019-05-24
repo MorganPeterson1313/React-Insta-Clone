@@ -19,7 +19,7 @@ class CommentSection extends React.Component {
                     <input
                     type= "text"
                     value= {this.data}
-                    placeholder = "comment"
+                    placeholder = 'comment'
                     name ="comment"
                     onChange={this.onChangeHandler}
                     
