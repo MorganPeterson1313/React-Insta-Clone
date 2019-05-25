@@ -26,10 +26,21 @@ function PostContainer(props) {
                     <img className="postThumb" src={data.thumbnailUrl} alt={data.username}/><h4>{data.username}</h4>
                     </div>
                 <img src={data.imageUrl} alt={data.username}  />
+                <div className="likes-comment">
                 <Likes/>
+                <i id="commentImg" className="far fa-comment"></i>
+                </div>
+                {data.comments.map(comment =>(
+               <div  key={comment.id} comment={comment}>
+                   <section className="comment">
+                   <p className="username"><strong>{comment.username}</strong></p>
+                   <p className="commentText">{comment.text}</p>
+                   </section>
+               </div>
+                ))}
                 <CommentSection
-                value={data.value}
-                changeHandler={props.changeHandler}
+                value={data.comments.value}
+               changeHandler={props.changeHandler}
                 addCommentHandler={props.addCommentHandler}
                 />
                 

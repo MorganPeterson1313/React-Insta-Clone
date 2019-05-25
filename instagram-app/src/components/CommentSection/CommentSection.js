@@ -4,7 +4,7 @@ import React from 'react'
 class CommentSection extends React.Component {
     constructor(props){
         super(props);
-        this.onChangeHandler=props.onChangeHandler
+        this.changeHandler=props.changeHandler
             this.addCommentHandler=props.addCommentHandler
 
     }
@@ -19,9 +19,9 @@ class CommentSection extends React.Component {
                     <input
                     type= "text"
                     value= {this.data}
-                    placeholder = 'comment'
+                    placeholder = 'add a comment'
                     name ="comment"
-                    onChange={this.onChangeHandler}
+                    onChange={this.changeHandler}
                     
                     />   
                     </form>

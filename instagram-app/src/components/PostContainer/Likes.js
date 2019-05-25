@@ -14,9 +14,9 @@ function Likes () {
     <div className = "countButton">
       
       <div className = "likeButton" onClick={() => setCount(count + 1)}>
-      <img className = "heart" src = "https://upload.wikimedia.org/wikipedia/commons/f/f1/Heart_coraz%C3%B3n.svg" alt="heart"/>
+      <img className = "heart" src = "https://upload.wikimedia.org/wikipedia/commons/8/87/Line-style-icons-heart.svg" alt="heart"/>
       </div>
-      <p className = "count"> <h5> {count}Likes</h5></p>
+      <div className = "count"> <h6 className="count"> {count}likes</h6></div>
     </div>
   );
 }

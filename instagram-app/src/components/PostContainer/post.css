@@ -1,5 +1,5 @@
 .post{
-background-color: aliceblue;
+background-color:whitesmoke;
 margin-top: 10%;
 width: 700px;
 justify-content: center;
@@ -35,9 +35,30 @@ h4{
     width: 20px;
     height: 20px;
     margin-bottom: 0%;
+    margin-left: 5%;
 
     
 }
-.count{
-    margin-bottom: 2%;
+.count, h6{
+    margin-bottom: 5%;
+    margin-left: 10%;
+}
+.countButton{
+    margin-left: 5%;
+}
+.comment{
+    display: flex;
+}
+.commentText{
+    margin-left: 2%;
+}
+.username{
+    margin-left: 5%;
+}
+.likes-comment{
+    display: flex;
+}
+#commentImg{
+    margin-top:1%;
+   
 }
