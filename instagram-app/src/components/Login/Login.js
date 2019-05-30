@@ -3,51 +3,53 @@ import React, { Component } from 'react'
 export class Login extends Component {
     constructor(props){
         super(props);
-        // this.changeHandler=props.changeHandler
-            this.addCommentHandler=props.addCommentHandler
- this.state = {
-            username: "",
-            password: ""
+        this.toggleLoginStatus=props.toggleLoginStatus
+        this.changeHandler=props.changeHandler
+            // this.addCommentHandler=props.addCommentHandler
+//  this.state = {
+//             username: "",
+//             password: ""
 
- };
+//  };
     }
 
-    changeHandler = (event) => {
+    // changeHandler = (event) => {
     
-        event.preventDefault();
-        const {value, name} = event.target
-        this.setState({ [name]:value });
+    //     event.preventDefault();
+    //     const {value, name} = event.target
+    //     this.setState({ [name]:value });
         
-      };
+    //   };
 
-      addCommentHandler = (e) => { 
-        e.preventDefault();
+    //   addCommentHandler = (e) => { 
+    //     e.preventDefault();
     
-        // const newComment = {
-        //  username: this.username,
-        //   id: Date.now(),
-        //   text: this.state.input
-        // };
+    //     // const newComment = {
+    //     //  username: this.username,
+    //     //   id: Date.now(),
+    //     //   text: this.state.input
+    //     // };
 
-        this.props.addComment(this.state.comments)
-    //   this.setState({
-    //       input: [newComment]
-    //        });
-    //     };
+    //     this.props.addComment(this.state.comments)
+    // //   this.setState({
+    // //       input: [newComment]
+    // //        });
+    // //     };
 
-      };
+    //   };
+login(){
 
+}
 
 
     render() {
         return (
 
             <div className = "login">
-            <form onSubmit = {this.addCommentHandler}>   
-            <h6>{this.state.username}</h6>
+            <form >   
             <input
             type= "text"
-            value= {this.state.username}
+            value= {this.props.username}
             placeholder = 'enter username'
             name ="username"
             onChange={this.changeHandler}
@@ -56,18 +58,17 @@ export class Login extends Component {
 
             </form>
             <br/>
-           <form onSubmit = {this.addCommentHandler}>   
-           <h6>{this.state.password}</h6>
+           <form >   
            <input
            type= "text"
-           value= {this.state.password}
+           value= {this.props.password}
            placeholder = 'enter password'
            name ="password"
            onChange={this.changeHandler}
            
            />   
            </form>
-           <button onSubmit = {this.addCommentHandler}>Login</button>
+           <button onClick={this.toggleLoginStatus}>Login</button>
 
            </div>
 

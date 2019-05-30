@@ -4,7 +4,7 @@ import './searchBar.css';
 class SearchBar extends React.Component {
     constructor(props){
         super(props);
-    
+            this.handleLogout=props.handleLogout
             this.onSearchChange = props.onSearchChange;
     }
 
@@ -32,12 +32,13 @@ render(){
 
                                             
                                             />
-
+                                     <button onClick={this.handleLogout}>Logout</button>
                                         </form>
                                         
                                         <i id="gps" className="fas fa-location-arrow"></i>
                                         <img id="heart" className="heart" src="https://upload.wikimedia.org/wikipedia/commons/8/87/Line-style-icons-heart.svg" alt="heart"/>
                                         <i id="user" className="far fa-user"></i>
+                                       
                                         </div>      
                             </div>
                     </div>

@@ -5,7 +5,7 @@ class CommentSection extends React.Component {
     constructor(props){
         super(props);
         // this.changeHandler=props.changeHandler
-            this.addCommentHandler=props.addCommentHandler
+            // this.addCommentHandler=props.addCommentHandler
  this.state = {
             comments: ""
 
@@ -17,7 +17,7 @@ class CommentSection extends React.Component {
         event.preventDefault();
         const {value, name} = event.target
         this.setState({ [name]:value });
-        
+       
       };
 
       addCommentHandler = (e) => { 
@@ -34,7 +34,7 @@ class CommentSection extends React.Component {
     //       input: [newComment]
     //        });
     //     };
-
+    this.setState({search:""});
       };
 
 
@@ -43,7 +43,7 @@ class CommentSection extends React.Component {
         return (
         
     
-                    <form onSubmit = {this.addCommentHandler}>   
+                    <form onSubmit = {this.changeHandler}>   
                     <h6>{this.state.comments}</h6>
                     <input
                     type= "text"
