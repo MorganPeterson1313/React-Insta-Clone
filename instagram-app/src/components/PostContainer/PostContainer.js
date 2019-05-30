@@ -5,23 +5,45 @@ import './post.css';
 import Likes from './Likes';
 
 
-function PostContainer(props) {
+
+class PostContainer extends React.Component {
+    constructor(props){
+        super(props);
+        this.changeHandler=props.changeHandler;
+            this.addCommentHandler=props.addCommentHandler;
+            this.addComment=props.addComment;
+            // this.state = { data: filteredPosts
+                            
+            // this.filteredPosts=props.filteredPosts;
+            
+            // }
+
+    }
+
+// addComment = (comment)=>{
+    
+// this.setState({dummyData:[...this.state.dummyData, {comments: comment, id:Date.now()}]})
+
+// }
+
+
+// onSearchChange = event => {
+
+//     this.setState({ search: event.target.value})
+   
+  
+  
+//   }
 
 
 
 
+render(){
 
-
-
-
-
-
-
-
-    return (
+    return(
         <div>
-            {props.dummyData.map(data =>(
-                <div key={data.id} data={data} className="post">
+            {this.props.dummyData.map(data =>(
+                <div key={data.id} data={data} className="post" >
                     <div className="postHeader">
                     <img className="postThumb" src={data.thumbnailUrl} alt={data.username}/><h4>{data.username}</h4>
                     </div>
@@ -38,16 +60,23 @@ function PostContainer(props) {
                    </section>
                </div>
                 ))}
+
+
+
+            
+
                 <CommentSection
-                value={data.comments.value}
-               changeHandler={props.changeHandler}
-                addCommentHandler={props.addCommentHandler}
+        
+                addComment={this.addComment}
+            //    changeHandler={this.changeHandler}
+            //     addCommentHandler={this.addCommentHandler}
                 />
-                
+              
             </div>
             ))}
         </div>
     )
+                }
 }
 
 PostContainer.defaultProps = {
@@ -66,7 +95,7 @@ dummyData: PropTypes.arrayOf(PropTypes.shape({
     likes: PropTypes.number,
     timestamp: PropTypes.string,
     comments: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number,
+    id: PropTypes.string,
     username: PropTypes.string,
     text: PropTypes.string
 
