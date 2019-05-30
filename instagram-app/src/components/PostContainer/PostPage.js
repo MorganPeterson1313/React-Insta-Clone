@@ -3,7 +3,7 @@ import dummyData from '../../dummy-data';
 import PostContainer from './PostContainer';
 import SearchBar from '../SearchBar/SearchBar';
 
-
+import './post.css';
 
 
 export class PostPage extends Component {

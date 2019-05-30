@@ -41,13 +41,13 @@ class PostContainer extends React.Component {
 render(){
 
     return(
-        <div>
+        <div className="posts">
             {this.props.dummyData.map(data =>(
                 <div key={data.id} data={data} className="post" >
                     <div className="postHeader">
                     <img className="postThumb" src={data.thumbnailUrl} alt={data.username}/><h4>{data.username}</h4>
                     </div>
-                <img src={data.imageUrl} alt={data.username}  />
+                <img src={data.imageUrl} alt={data.username} className="postImg" />
                 <div className="likes-comment">
                 <Likes/>
                 <i id="commentImg" className="far fa-comment"></i>

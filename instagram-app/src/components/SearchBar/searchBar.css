@@ -22,3 +22,9 @@ h5{
 #gps, #user , #heart{
     margin-left: 8%;
 }
+button{
+    background-color: whitesmoke;
+    border: 2px tomato solid;
+    color: tomato;
+    border-radius: 5%;
+}

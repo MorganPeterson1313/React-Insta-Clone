@@ -32,6 +32,7 @@ render(){
 
                                             
                                             />
+                                            <br/>
                                      <button onClick={this.handleLogout}>Logout</button>
                                         </form>
                                         

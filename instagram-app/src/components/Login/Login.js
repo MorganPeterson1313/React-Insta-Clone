@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import './login.css';
 export class Login extends Component {
     constructor(props){
         super(props);
@@ -46,6 +46,7 @@ login(){
         return (
 
             <div className = "login">
+                <h1>Instagram Login</h1>
             <form >   
             <input
             type= "text"
@@ -68,6 +69,7 @@ login(){
            
            />   
            </form>
+           <br/>
            <button onClick={this.toggleLoginStatus}>Login</button>
 
            </div>
