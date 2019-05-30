@@ -92,3 +92,4 @@ render (){
 
   const ConditionalView = authorize(PostPage)(Login);
 export default App;
+
