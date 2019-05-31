@@ -1,0 +1,30 @@
+.camera{
+    height: 20px;
+    width:20px;
+    margin-right: 2%;
+}
+.searchBar{
+    display:flex;
+    margin-left: 22%;
+    margin-top: 5%;
+
+}
+h5{
+    margin-left: 2%;
+    margin-right: 2%;
+    font-family: 'Courgette', cursive;
+}
+.heart{
+    width: 20px;
+    height: 20px;
+    margin-left: 5%;
+}
+#gps, #user , #heart{
+    margin-left: 8%;
+}
+button{
+    background-color: whitesmoke;
+    border: 2px tomato solid;
+    color: tomato;
+    border-radius: 5%;
+}

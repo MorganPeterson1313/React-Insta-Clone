@@ -1,0 +1,89 @@
+.post{
+background-color:whitesmoke;
+margin-top: 10%;
+width: 700px;
+justify-content: center;
+justify-items: center;
+margin-left: 30%;
+}
+
+@media( max-width: 500px ){
+    
+    .post{
+      width: 300px;
+      height:auto;
+      margin-right: 2%;
+    }
+    .postImg{
+        width: 300px;
+        height:auto;
+        margin-right: 2%;
+    }
+  }
+
+
+
+
+.postHeader{
+    display: flex;
+    margin-left: 4%;
+    
+}
+.postThumb{
+    widows: 50px;
+    height: 50px;
+    border-radius: 100%;
+    
+
+}
+h4{
+
+    align-items: center;
+}
+.countButton{
+   /* display: flex;  */
+    
+    width: 50px;
+    height: 50px;
+    /* align-items: center; */
+    margin-left: 2%;
+
+}
+.heart{
+    width: 20px;
+    height: 20px;
+    margin-bottom: 0%;
+    margin-left: 5%;
+
+    
+}
+.count, h6{
+    margin-bottom: 5%;
+    margin-left: 10%;
+}
+.countButton{
+    margin-left: 5%;
+}
+.comment{
+    display: flex;
+}
+.commentText{
+    margin-left: 2%;
+}
+.username{
+    margin-left: 5%;
+}
+.likes-comment{
+    display: flex;
+}
+#commentImg{
+    margin-top:1%;
+   
+}
+@media( max-width: 500px ){
+    
+    .App{
+      text-align: center;
+        margin-right: 30%;
+    }
+  }
